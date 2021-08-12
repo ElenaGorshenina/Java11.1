@@ -6,10 +6,12 @@ public class MovieManager {
     private CatalogMovie[] catalogs = new CatalogMovie[0];
     private int limit = 10;
 
-    public MovieManager(){}
+    public MovieManager() {
+    }
+
     public MovieManager(int lim) {
-        if (lim < 10){
-        this.limit = lim;
+        if (lim < 10) {
+            this.limit = lim;
         } else this.limit = 10;
     }
 
@@ -37,10 +39,11 @@ public class MovieManager {
             resultLength = catalogs.length;
         }
         CatalogMovie[] result = new CatalogMovie[resultLength];
-        for (int i = 0; i < result.length; i++){
+        for (int i = 0; i < result.length; i++) {
             int index = catalogs.length - i - 1;
             result[i] = catalogs[index];
-        } return  result;
+        }
+        return result;
     }
 
    /* public CatalogMovie[] getAll() {
